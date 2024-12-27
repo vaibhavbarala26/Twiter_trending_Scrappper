@@ -71,10 +71,11 @@ def fetch_trending_and_save_to_db():
         i = 0
         for element in elements:
             if "What’s happening" not in element.text and "Trending" not in element.text and "posts" not in element.text and "Show more" not in element.text:
+                IpAddress = random.choice(ip_address_array)
                 document.append({
                     "Trending": element.text,
                     "CreatedAt": datetime.now().time().strftime("%H:%M:%S"),
-                    "IpAddress": random.choice(ip_address_array)  # Use random.choice here
+                    "IpAddress": IpAddress.split(":")[0]  # Use random.choice here
                 })
                 i += 1
 
