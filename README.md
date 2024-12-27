@@ -2,6 +2,10 @@
 
 This project is a Flask-based web application that fetches and displays trending topics from a website. The app uses cookies to maintain the session for scraping the website, and proxies to ensure better anonymity while fetching the data. The trending topics are then saved into a database for further use.
 
+Note----> Please First Login Manually with your account by pressing the login button 
+
+![Screenshot 2024-12-27 220135](https://github.com/user-attachments/assets/a99aa325-8ee6-457f-8bbd-92083d70ebc3)
+
 ## Features
 
 - **Login**: Saves cookies after a successful login to avoid repeated logins.
