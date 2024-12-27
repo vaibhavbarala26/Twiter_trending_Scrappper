@@ -38,6 +38,7 @@
                 <th>#</th>
                 <th>Trending Topic</th>
                 <th>Created At</th>
+                <th>IP address</th>
             </tr>
         </thead>
         <tbody>
@@ -46,6 +47,7 @@
                     <td>{{ loop.index }}</td>
                     <td>{{ dat['Trending'] }}</td>
                     <td>{{ dat['CreatedAt'] }}</td>
+                    <td>{{dat['IpAddress']}}</td>
                 </tr>
             {% endfor %}
         </tbody>
