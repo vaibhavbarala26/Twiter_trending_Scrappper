@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trending Topics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h2>Trending topics fetched successfully!</h2>
+    <button onclick="window.location.href='/run-script'">Get Top Trending Topics</button>
+<button onclick="window.location.href='/'">Go to Home</button>
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Trending Topic</th>
+                <th>Created At</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for dat in data %}
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>{{ dat['Trending'] }}</td>
+                    <td>{{ dat['CreatedAt'] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
